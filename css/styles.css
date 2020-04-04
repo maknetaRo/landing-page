@@ -209,6 +209,7 @@ a:hover {
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
   padding: 2% 5%;
+  text-align: left;
 }
 @media only screen and (min-width: 35em) {
   .landing__container {
@@ -229,8 +230,108 @@ a:hover {
   }
   .between-text {
     width: 50%;
+    font-size: 2rem;
   }
 }
+section#gallery {
+  padding-bottom: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.item {
+  min-width: 300px;
+  min-height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 8px solid floralwhite;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  border: 8px solid rgb(254, 112, 138);
+}
+.one {
+  background-image: url("../img/img-gallery/beautiful-bloom-blooming-blossom-540522.jpg");
+}
+.two {
+  background-image: url("../img/img-gallery/person-holding-white-peony-bouquet-closeup-photography-1109561.jpg");
+}
+.three {
+  background-image: url("../img/img-gallery/pexels-photo-931179.jpeg");
+}
+.four {
+  background-image: url("../img/img-gallery/photo-of-flowers-in-can-1809337.jpg");
+}
+.five {
+  background-image: url("../img/img-gallery/yellow-mums-orange-peruvian-lilies-and-carnation-flower-1058771.jpg");
+}
+.six {
+  background-image: url("../img/img-gallery/yellow-and-pink-petaled-flowers-on-table-near-ocean-under-169193.jpg");
+}
+.seven {
+  background-image: url("../img/img-gallery/wedding-preparation-313707.jpg");
+}
+.eight {
+  background-image: url("../img/img-gallery/white-and-red-petaled-flowers-close-up-photography-2691784.jpg");
+}
+.nine {
+  background-image: url("../img/img-gallery/white-orange-and-green-floral-bouquet-decor-931158.jpg");
+}
+.ten {
+  background-image: url("../img/img-gallery/woman-holding-bouquet-of-roses-1424810.jpg");
+}
+@media only screen and (min-width: 35em) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item {
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+@media only screen and (min-width: 45em) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item {
+    min-width: 200px;
+    min-height: 200px;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 58em) {
+  .gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .item {
+    min-width: 200px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+  }
+  section#gallery {
+    max-width: 1224px;
+  }
+  .landing__container.gallery {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
 /*
 section:nth-of-type(even) .landing__container {
   margin-right: 0;
