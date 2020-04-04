@@ -23,7 +23,7 @@
       </nav>
     </header>
     <main>
-      <header class="main__hero">
+      <header class="main__hero" id="home" data-nav="FlowerPower">
         <div class="header-container">
           <h1 class="main-title">Flower Power</h1>
           <h2 class="subtitle">
@@ -35,7 +35,7 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="about" data-nav="Aervices" class="your-active-class">
+      <section id="about" data-nav="About" class="your-active-class">
         <div class="landing__container about">
           <h2 class="section-title">About Us</h2>
           <div class="about-row">
@@ -64,53 +64,71 @@
       <section id="services" data-nav="Servicess">
         <div class="landing__container">
           <h2 class="section-title">Our Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+          <div class="row-cards">
+            <div class="card">
+              <div class="upper-part first"></div>
+              <div class="lower-part">
+                <h3 class="service-title">For Birthday</h3>
+                <p class="service-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  nemo fugiat deserunt sint delectus dolorum, nobis
+                </p>
+                <div class="price"><span>$</span> 29.99</div>
+                <button class="buyBtn">Buy Now</p>
+              </div>
+            </div>
+            <div class="card middle-card">
+              <div class="upper-part second"></div>
+              <div class="lower-part">
+                <h3 class="service-title">For Wedding</h3>
+                <p class="service-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  nemo fugiat deserunt sint delectus dolorum, nobis
+                </p>
+                <div class="price"><span>$</span> 49.99</div>
+                <button class="buyBtn">Buy Now</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="upper-part third"></div>
+              <div class="lower-part">
+                <h3 class="service-title">For Home</h3>
+                <p class="service-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  nemo fugiat deserunt sint delectus dolorum, nobis
+                </p>
+                <div class="price"><span>$</span> 19.99</div>
+                <button class="buyBtn">Buy Now</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="testimonials" data-nav="Testimonials">
         <div class="landing__container">
           <h2 class="section-title">Happy Clients</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+          <div class="testimonial-cards">
+            <div class="card-vertical">
+              <div class="people">
+                <img src="img/img-clients/smiling-woman-wearing-white-lace-top-2104185.jpg" alt="">
+              </div>              
+              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+            </div>
+            <div class="card-vertical">
+              <div class="people">
+                <img src="img/img-clients/selective-focus-portrait-photo-of-man-in-gray-t-shirt-2518748.jpg" alt="">
+              </div>
+              
+              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+            </div>
+            <div class="card-vertical">
+              <div class="people">
+                <img src="img/img-clients/woman-wearing-brown-bucket-cap-732425.jpg" alt="">
+              </div>
+              
+              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="gallery" data-nav="Gallery">
@@ -130,26 +148,34 @@
           </div>
         </div>
       </section>
-      <section id="contact-us" data-nav="Contact Us">
+      <section id="contact-us" data-nav="Contact">
         <div class="landing__container contact-us">
           <h2 class="section-title">Contact Us</h2>
-          <form action="">
-            <input type="text" />
-          </form>
-          <form action="">
-            <input type="email" />
-          </form>
-          <form action="">
-            <input type="text" />
-          </form>
-          <form action="">
-            <input type="submit" />
-          </form>
+          <div class="contact-form">
+            <form action="">
+              <input onfocus="this.value=''" type="text" placeholder="Your name..." />
+            </form>
+            <form action="">
+              <input onfocus="this.value=''" type="email" placeholder="Your email address..." />
+            </form>
+            <form action="">
+              <textarea onfocus="this.value=''" rows="10" placeholder="Your message..."></textarea>
+            </form>   
+            <form action="">
+              <input onfocus="this.value=''" type="submit" value="Send" class="send-btn"/>
+            </form>         
+              
+            
+          </div>
+      
         </div>
       </section>
     </main>
     <footer class="page__footer">
-      <p>&copy Udacity</p>
+      <p>&copy Udacity Front End Developer Nanodegree Program Project no 2</p>
+      <p class="author">Made by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a></p>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

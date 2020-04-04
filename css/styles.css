@@ -24,6 +24,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Typeography General*/
 h1,
 h2,
@@ -73,7 +76,7 @@ h1 {
 section {
   position: relative;
   min-height: 80vh;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -82,21 +85,44 @@ section {
 /* Navigation Styles*/
 .navbar__menu {
   padding-left: 0;
+  padding-top: 0.5rem;
   margin: 0 auto;
   text-align: center;
   height: 80px;
   width: 100%;
   background: FloralWhite;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__menu li {
   display: inline-block;
+  padding: 0.5rem 0.75rem;
+  list-style: none;
+  font-size: 0.8rem;
 }
 
-a:hover {
-  border-bottom: 2px dotted rgb(254, 112, 138);
+.navbar__menu li a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
 }
+
+@media only screen and (min-width: 35em) {
+  .navbar__menu li {
+    padding: 1rem 1.25rem 0.5rem;
+    font-size: 1rem;
+  }
+  .navbar__menu {
+    padding-top: 1rem;
+  }
+}
+
+li:hover {
+  border: 3px solid rgb(254, 112, 138);
+}
+
 /* 
 /* Header Styles */
 .page__header {
@@ -109,13 +135,23 @@ a:hover {
 
 /* Footer Styles */
 .page__footer {
-  background: #000;
+  background: rgba(0, 0, 0, 0.8);
   padding: 3em;
-  color: #fff;
+  color: floralwhite;
 }
 
 .page__footer p {
-  color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: floralwhite;
+  padding-top: 1rem;
+}
+.author a {
+  color: floralwhite;
+}
+
+.author a:hover {
+  color: rgb(254, 112, 138);
 }
 
 @media only screen and (min-width: 35em) {
@@ -143,6 +179,7 @@ a:hover {
 .landing__container {
   padding-top: 90px;
   margin: 0 auto;
+  padding-bottom: 0;
 }
 
 .about {
@@ -173,6 +210,7 @@ a:hover {
   flex: 1 0 50%;
 }
 .about-title,
+.service-title,
 .section-title {
   font-size: 1.75rem;
   letter-spacing: 2px;
@@ -196,6 +234,7 @@ a:hover {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  margin-top: 90px;
 }
 
 .between-text {
@@ -214,8 +253,8 @@ a:hover {
 @media only screen and (min-width: 35em) {
   .landing__container {
     max-width: 50em;
-    padding: 6.5rem 4em;
   }
+
   .between-text {
     width: 80%;
   }
@@ -240,7 +279,6 @@ section#gallery {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-
   width: 100%;
   justify-content: center;
   justify-items: center;
@@ -332,113 +370,214 @@ section#gallery {
   }
 }
 
-/*
-section:nth-of-type(even) .landing__container {
-  margin-right: 0;
-  margin-left: auto;
-  text-align: right;
-} */
-
-/* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
-/* section:nth-of-type(odd) .landing__container::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.187);
-  position: absolute;
-  z-index: -5;
-  width: 20vh;
-  height: 20vh;
-  border-radius: 50%;
-  opacity: 0;
-  transition: ease 0.5s all;
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 250px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 }
 
-section:nth-of-type(even) .landing__container::before {
-  content: "";
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  position: absolute;
-  top: 3em;
-  right: 3em;
-  z-index: -5;
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  opacity: 0;
-  transition: ease 0.5s all;
+.card:hover {
+  transform: scale(1.05);
 }
 
-section:nth-of-type(3n) .landing__container::after {
-  content: "";
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -5;
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  opacity: 0;
-  transition: ease 0.5s all;
+.upper-part {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+.first {
+  background-image: url("../img/person-holding-maroon-stargazer-flowers-1179026.jpg");
+}
+.second {
+  background-image: url("../img/close-up-photo-of-pink-and-white-faux-rose-bouquet-1488310.jpg");
+}
+.third {
+  background-image: url("../img/pink-garden-rose-in-clear-glass-jar-2422135.jpg");
 }
 
-section:nth-of-type(3n + 1) .landing__container::after {
-  content: "";
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  position: absolute;
-  right: 20vw;
-  bottom: -5em;
-  z-index: -5;
-  width: 15vh;
-  height: 15vh;
-  border-radius: 50%;
-  opacity: 0;
-  transition: ease 0.5s all;
+.middle-card {
+  margin: 2rem;
 }
 
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-/* section.your-active-class {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-} */
-
-/* section.your-active-class .landing__container::before {
-  opacity: 1;
-  animation: rotate 4s linear 0s infinite forwards;
+.lower-part {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.75rem;
+  border-left: 3px solid rgb(254, 112, 138);
+  border-bottom: 3px solid rgb(254, 112, 138);
+  border-right: 3px solid rgb(254, 112, 138);
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+.service-title {
+  text-align: center;
+  padding-top: 1.75rem;
+}
+.price {
+  text-align: center;
+  padding: 1.75rem 0;
+  font-weight: bold;
+  font-size: 2.25rem;
+  font-style: italic;
 }
 
-section.your-active-class .landing__container::after {
-  opacity: 1;
-  animation: rotate 5s linear 0s infinite forwards reverse;
-} */
+.buyBtn {
+  display: inline-block;
+  font-family: "Parisienne", cursive;
+  margin: 0 auto 1.75rem;
+  padding: 0.75rem 1.5rem;
+  color: floralwhite;
+  background: rgb(254, 112, 138);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  outline: none;
+  border: 8px solid floralwhite;
+  cursor: pointer;
+}
 
-/* Section Active Styles Keyframe Animations */
-/* @keyframes rotate {
-  from {
-    transform: rotate(0deg) translate(-1em) rotate(0deg);
+.buyBtn:hover {
+  transform: scale(1.1);
+  background: floralwhite;
+  color: rgba(0, 0, 0, 0.8);
+  border: 8px solid rgb(254, 112, 138);
+}
+
+.testimonial-cards {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-vertical {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-vertical:hover {
+  border: 8px solid rgb(254, 112, 138);
+}
+
+@media only screen and (min-width: 35em) {
+  .card-vertical {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+
+  .card-vertical:nth-child(2) {
+    flex-direction: row-reverse;
   }
-} */
+
+  .testim {
+    display: inline-block;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex: 1 0 65%;
+  }
+}
+.testim {
+  padding-top: 1.25rem;
+}
+
+.card-vertical:nth-child(2).testim {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+
+.people {
+  position: relative;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.people img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-us {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+form {
+  padding: 0.75rem;
+  line-height: 1.2;
+  opacity: 0.9;
+}
+
+input,
+textarea {
+  display: block;
+  background: floralwhite;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ddddde;
+  height: 48px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 300px;
+  padding-left: 1.5rem;
+}
+input:hover,
+textarea:hover {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #ddddde;
+  border-bottom: 5px solid rgb(254, 112, 138);
+}
+
+.send-btn {
+  margin-top: 2rem;
+  padding-left: 0;
+  background: rgb(254, 112, 138);
+  color: floralwhite;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-family: "Parisienne", cursive;
+  border: 3px solid floralwhite;
+  line-height: 1.5;
+}
+.send-btn:hover {
+  border: 2px solid transparent;
+  transform: scaleY(1.1);
+  background-color: floralwhite;
+  color: rgb(254, 112, 138);
+  border: 3px solid rgb(254, 112, 138);
+}
