@@ -195,6 +195,7 @@ li:hover {
   padding: 0 2rem;
   align-items: stretch;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 .about-text {
   padding: 1.5rem;
@@ -204,13 +205,18 @@ li:hover {
   line-height: 1.5;
   flex: 1 0 50%;
 }
+
+.about-photo {
+  flex: 1 0 50%;
+  max-width: 250px;
+  margin: 0 auto;
+}
 .florist {
   padding: 2rem 1rem;
-  max-width: 250px;
+  width: 100%;
   height: auto;
-  margin: auto;
+
   filter: brightness(80%);
-  flex: 1 0 50%;
 }
 .about-title,
 .service-title,
