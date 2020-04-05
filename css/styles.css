@@ -75,7 +75,6 @@ h1 {
 
 section {
   position: relative;
-  min-height: 80vh;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -177,6 +176,7 @@ li:hover {
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
+  min-height: 80vh;
   padding-top: 90px;
   margin: 0 auto;
   padding-bottom: 0;
@@ -523,6 +523,12 @@ section#gallery {
   max-width: 400px;
   margin: 0 auto;
 }
+
+/* @media only screen and (min-width: 35em) {
+  .contact-us {
+    min-height: 60vh; 
+  }
+} */
 
 .contact-form {
   display: flex;
