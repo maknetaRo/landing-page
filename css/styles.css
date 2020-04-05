@@ -533,12 +533,6 @@ section#gallery {
   margin: 0 auto;
 }
 
-/* @media only screen and (min-width: 35em) {
-  .contact-us {
-    min-height: 60vh; 
-  }
-} */
-
 .contact-form {
   display: flex;
   flex-direction: column;
