@@ -28,19 +28,6 @@ const allSectionsList = Array.from(allSections);
  * Start Helper Functions
  *
  */
-allSectionsList.forEach((item) => {
-  let elem = document.createElement("li");
-  let aTag = document.createElement("a");
-  let url = `#${item.id}`;
-
-  let urlElem = url;
-  aTag.href = urlElem;
-  aTag.textContent = item.dataset.nav;
-
-  elem.append(aTag);
-  ulList.appendChild(elem);
-});
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -52,6 +39,12 @@ allSectionsList.forEach((item) => {
 // Add class 'active' to section when near top of viewport
 
 // Scroll to anchor ID using scrollTO event
+function offset(el) {
+  var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
 
 /**
  * End Main Functions
@@ -60,11 +53,27 @@ allSectionsList.forEach((item) => {
  */
 
 // Build menu
+allSectionsList.forEach((item) => {
+  let elem = document.createElement("li");
+  let aTag = document.createElement("a");
+  let url = `#${item.id}`;
+
+  let urlElem = url;
+  aTag.href = urlElem;
+  aTag.textContent = item.dataset.nav;
+
+  elem.append(aTag);
+  ulList.appendChild(elem);
+  return ulList;
+});
+navbar.appendChild(ulList);
+console.log(navbar);
 
 // Scroll to section on link click
 window.onscroll = function () {
   stickyNavbar();
 };
+
 const sticky = navbar.offSetTop;
 
 function stickyNavbar() {

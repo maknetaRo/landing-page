@@ -122,6 +122,14 @@ section {
 li:hover {
   border: 3px solid rgb(254, 112, 138);
 }
+li:active {
+  border: 3px solid floralwhite;
+  background: rgb(254, 112, 138);
+  color: white;
+}
+.navbar__menu li a:active {
+  color: white;
+}
 
 /* 
 /* Header Styles */
@@ -231,6 +239,9 @@ li:hover {
 .section-title {
   text-align: center;
   font-size: 2.25rem;
+}
+
+.your-active-class {
 }
 
 .between {
