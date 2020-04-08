@@ -112,6 +112,7 @@ section {
   .navbar__menu li {
     padding: 1rem 1.25rem 0.5rem;
     font-size: 1rem;
+    border: 3px solid floralwhite;
   }
   .navbar__menu {
     padding-top: 1rem;
@@ -479,6 +480,7 @@ section#gallery {
   text-align: center;
   justify-content: center;
   align-items: center;
+  border: 8px solid floralwhite;
 }
 
 .card-vertical:hover {
