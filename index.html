@@ -35,9 +35,9 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="about" data-nav="About" class="your-active-class">
+      <section id="about" class="hidden" data-nav="About" >
         <div class="landing__container about">
-          <h2 class="section-title">About Us</h2>
+          <div class="box-title"><h2 class="section-title title">About Us</h2></div>
           <div class="about-row">
             <div class="about-text">
               <h3 class="about-title">The florist for every event</h3>
@@ -62,9 +62,9 @@
           The arrangment of flowers you have never seen before
         </h3>
       </div>
-      <section id="services" data-nav="Services">
+      <section id="services" class="hidden" data-nav="Services">
         <div class="landing__container">
-          <h2 class="section-title">Our Services</h2>
+          <div class="box-title"> <h2 class="section-title title">Our Services</h2></div>
           <div class="row-cards">
             <div class="card">
               <div class="upper-part first"></div>
@@ -105,9 +105,9 @@
           </div>
         </div>
       </section>
-      <section id="testimonials" data-nav="Testimonials">
+      <section id="testimonials" class="hidden" data-nav="Testimonials">
         <div class="landing__container">
-          <h2 class="section-title">Happy Clients</h2>
+          <div class="box-title"><h2 class="section-title title">Happy Clients</h2></div>
           <div class="testimonial-cards">
             <div class="card-vertical">
               <div class="people">
@@ -132,9 +132,9 @@
           </div>
         </div>
       </section>
-      <section id="gallery" data-nav="Gallery">
+      <section id="gallery" class="hidden" data-nav="Gallery">
         <div class="landing__container gallery">
-          <h2 class="section-title">Our Flowers</h2>
+          <div class="box-title"> <h2 class="section-title title">Our Flowers</h2></div>
           <div class="gallery-grid">
             <div class="item one"></div>
             <div class="item two"></div>
@@ -149,9 +149,9 @@
           </div>
         </div>
       </section>
-      <section id="contact-us" data-nav="Contact">
+      <section id="contact-us" class="hidden" data-nav="Contact">
         <div class="landing__container contact-us">
-          <h2 class="section-title">Contact Us</h2>
+          <div class="box-title"> <h2 class="section-title title">Contact Us</h2> </div>
           <div class="contact-form">
             <form action="">
               <input onfocus="this.value=''" type="text" placeholder="Your name..." />

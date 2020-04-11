@@ -17,64 +17,23 @@
  * Define Global Variables
  *
  */
-
-const navbar = document.querySelector("navbar__menu");
+const navbar = document.querySelector(".navbar__menu");
 const ulList = document.getElementById("navbar__list");
-const allSections = document.getElementsByTagName("section");
-const allSectionsList = Array.from(allSections);
+const sections = document.getElementsByTagName("section");
+const allSectionsList = Array.from(sections);
 
 /**
  * End Global Variables
  * Start Helper Functions
  *
  */
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
-
-// build the nav
-
-// Add class 'active' to section when near top of viewport
-
-// Scroll to anchor ID using scrollTO event
-function offset(el) {
-  var rect = el.getBoundingClientRect(),
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-}
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-allSectionsList.forEach((item) => {
-  let elem = document.createElement("li");
-  let aTag = document.createElement("a");
-  let url = `#${item.id}`;
-
-  let urlElem = url;
-  aTag.href = urlElem;
-  aTag.textContent = item.dataset.nav;
-
-  elem.append(aTag);
-  ulList.appendChild(elem);
-  return ulList;
-});
-navbar.appendChild(ulList);
-console.log(navbar);
-
-// Scroll to section on link click
 window.onscroll = function () {
   stickyNavbar();
+  setActive();
+  // activeLink();
 };
 
-const sticky = navbar.offSetTop;
+const sticky = navbar.offsetTop;
 
 function stickyNavbar() {
   if (window.pageYOffset >= sticky) {
@@ -84,4 +43,79 @@ function stickyNavbar() {
   }
 }
 
+/**
+ * End Helper Functions
+ * Begin Main Functions
+ *
+ */
+
+// build the nav
+allSectionsList.forEach((item) => {
+  let elem = document.createElement("li");
+  elem.classList.add("link");
+  let aTag = document.createElement("a");
+  let url = `#${item.id}`;
+  let urlElem = url;
+  aTag.href = urlElem;
+  aTag.textContent = item.dataset.nav;
+
+  elem.append(aTag);
+  ulList.appendChild(elem);
+  return ulList;
+});
+navbar.appendChild(ulList);
+
+// Add class 'active' to section when near top of viewport
+let windowHeight = window.innerHeight;
+
+function setActive() {
+  for (let i = 0; i < allSectionsList.length; i++) {
+    let positionFromTop = allSectionsList[i].getBoundingClientRect().top;
+    let positionFromBottom = allSectionsList[i].getBoundingClientRect().bottom;
+    allSectionsList[i].className = allSectionsList[i].className.replace(
+      "your-active-section",
+      "hidden"
+    );
+    if (positionFromTop - windowHeight <= 0) {
+      allSectionsList[i].className = allSectionsList[i].className.replace(
+        "hidden",
+        "your-active-section"
+      );
+    } else {
+      allSectionsList[i].className = allSectionsList[i].className.replace(
+        "your-active-section",
+        "hidden"
+      );
+    }
+  }
+}
+
+// Scroll to anchor ID using scrollTO event
+
+/**
+ * End Main Functions
+ * Begin Events
+ *
+ */
+
+// Build menu
+
+// Scroll to section on link click
+
 // Set sections as active
+
+let elements = document.getElementsByClassName("link");
+let links = Array.from(elements);
+
+for (let i = 0; i < elements.length; i++) {
+  elements[i].onclick = function () {
+    let el = elements[0];
+    while (el) {
+      if (el.tagName === "LI") {
+        el.classList.remove("active-link");
+      }
+      el = el.nextSibling;
+    }
+    this.classList.add("active-link");
+  };
+}
