@@ -35,9 +35,11 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="about" class="hidden" data-nav="About" >
+      <section id="about" class="hidden" data-nav="About">
         <div class="landing__container about">
-          <div class="box-title"><h2 class="section-title title">About Us</h2></div>
+          <div class="box-title">
+            <h2 class="section-title title">About Us</h2>
+          </div>
           <div class="about-row">
             <div class="about-text">
               <h3 class="about-title">The florist for every event</h3>
@@ -49,11 +51,11 @@
             </div>
             <div class="about-photo">
               <img
-              src="./img/photo-of-woman.jpg"
-              alt="photo of a woman with flowers"
-              class="florist"
-            />
-            </div>          
+                src="./img/photo-of-woman.jpg"
+                alt="photo of a woman with flowers"
+                class="florist"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -64,7 +66,9 @@
       </div>
       <section id="services" class="hidden" data-nav="Services">
         <div class="landing__container">
-          <div class="box-title"> <h2 class="section-title title">Our Services</h2></div>
+          <div class="box-title">
+            <h2 class="section-title title">Our Services</h2>
+          </div>
           <div class="row-cards">
             <div class="card">
               <div class="upper-part first"></div>
@@ -87,7 +91,7 @@
                   nemo fugiat deserunt sint delectus dolorum, nobis
                 </p>
                 <div class="price"><span>$</span> 49.99</div>
-                <button class="buyBtn">Buy Now</p>
+                <button class="buyBtn">Buy Now</button>
               </div>
             </div>
             <div class="card">
@@ -99,7 +103,7 @@
                   nemo fugiat deserunt sint delectus dolorum, nobis
                 </p>
                 <div class="price"><span>$</span> 19.99</div>
-                <button class="buyBtn">Buy Now</p>
+                <button class="buyBtn">Buy Now</button>
               </div>
             </div>
           </div>
@@ -107,34 +111,59 @@
       </section>
       <section id="testimonials" class="hidden" data-nav="Testimonials">
         <div class="landing__container">
-          <div class="box-title"><h2 class="section-title title">Happy Clients</h2></div>
+          <div class="box-title">
+            <h2 class="section-title title">Happy Clients</h2>
+          </div>
           <div class="testimonial-cards">
             <div class="card-vertical">
               <div class="people">
-                <img src="img/img-clients/smiling-woman-wearing-white-lace-top-2104185.jpg" alt="">
-              </div>              
-              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+                <img
+                  src="img/img-clients/smiling-woman-wearing-white-lace-top-2104185.jpg"
+                  alt=""
+                />
+              </div>
+              <p class="testim">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                excepturi maxime voluptates, aperiam officiis at beatae, saepe
+                quam quidem.
+              </p>
             </div>
             <div class="card-vertical">
               <div class="people">
-                <img src="img/img-clients/selective-focus-portrait-photo-of-man-in-gray-t-shirt-2518748.jpg" alt="">
+                <img
+                  src="img/img-clients/selective-focus-portrait-photo-of-man-in-gray-t-shirt-2518748.jpg"
+                  alt=""
+                />
               </div>
-              
-              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+
+              <p class="testim">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                excepturi maxime voluptates, aperiam officiis at beatae, saepe
+                quam quidem.
+              </p>
             </div>
             <div class="card-vertical">
               <div class="people">
-                <img src="img/img-clients/woman-wearing-brown-bucket-cap-732425.jpg" alt="">
+                <img
+                  src="img/img-clients/woman-wearing-brown-bucket-cap-732425.jpg"
+                  alt=""
+                />
               </div>
-              
-              <p class="testim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi maxime voluptates, aperiam officiis at beatae, saepe quam quidem.</p>
+
+              <p class="testim">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                excepturi maxime voluptates, aperiam officiis at beatae, saepe
+                quam quidem.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section id="gallery" class="hidden" data-nav="Gallery">
         <div class="landing__container gallery">
-          <div class="box-title"> <h2 class="section-title title">Our Flowers</h2></div>
+          <div class="box-title">
+            <h2 class="section-title title">Our Flowers</h2>
+          </div>
           <div class="gallery-grid">
             <div class="item one"></div>
             <div class="item two"></div>
@@ -151,30 +180,43 @@
       </section>
       <section id="contact-us" class="hidden" data-nav="Contact">
         <div class="landing__container contact-us">
-          <div class="box-title"> <h2 class="section-title title">Contact Us</h2> </div>
+          <div class="box-title">
+            <h2 class="section-title title">Contact Us</h2>
+          </div>
           <div class="contact-form">
             <form action="">
-              <input onfocus="this.value=''" type="text" placeholder="Your name..." />
+              <input
+                onfocus="this.value=''"
+                type="text"
+                placeholder="Your name..."
+              />
             </form>
             <form action="">
-              <input onfocus="this.value=''" type="email" placeholder="Your email address..." />
+              <input
+                onfocus="this.value=''"
+                type="email"
+                placeholder="Your email address..."
+              />
             </form>
             <form action="">
-              <textarea onfocus="this.value=''" rows="10" placeholder="Your message..."></textarea>
-            </form>   
+              <textarea
+                onfocus="this.value=''"
+                rows="10"
+                placeholder="Your message..."
+              ></textarea>
+            </form>
             <form action="">
-              <input type="submit" value="Send" class="send-btn"/>
-            </form>         
-              
-            
+              <input type="submit" value="Send" class="send-btn" />
+            </form>
           </div>
-      
         </div>
       </section>
     </main>
     <footer class="page__footer">
       <p>&copy Udacity Front End Developer Nanodegree Program Project no 2</p>
-      <p class="author">Made by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a></p>
+      <p class="author">
+        Made by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a>
+      </p>
     </footer>
 
     <script src="js/app.js"></script>
